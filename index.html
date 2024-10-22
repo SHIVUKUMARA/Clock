@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog & Digital Clock</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="navigation">
+      <div id="clocks">Clocks</div>
+      <div id="digital">Digital</div>
+      <div id="analog">Analog</div>
+    </header>
+    <div id="clock-container">
+      <div class="analog-clock" id="analog-clock">
+        <svg height="400" width="400">
+          <defs>
+            <marker
+              id="hourhead"
+              markerWidth="5"
+              markerHeight="5"
+              refX="2"
+              refY="3.5"
+              orient="auto"
+            >
+              <polygon points="0 3.5, 10 0, 10 7" fill="red" />
+            </marker>
+            <marker
+              id="minutehead"
+              markerWidth="5"
+              markerHeight="5"
+              refX="2"
+              refY="3.5"
+              orient="auto"
+            >
+              <polygon points="0 3.5, 10 0, 10 7" fill="green" />
+            </marker>
+            <marker
+              id="secondhead"
+              markerWidth="5"
+              markerHeight="5"
+              refX="2"
+              refY="3.5"
+              orient="auto"
+            >
+              <polygon points="0 3.5, 10 0, 10 7" fill="purple" />
+            </marker>
+          </defs>
+
+          <circle cx="200" cy="200" r="190" class="clock" />
+          <circle cx="200" cy="200" r="170" class="clock-border" />
+
+          <!-- hour -->
+          <line x1="200" y1="140" x2="200" y2="200" class="hour" />
+
+          <!-- minute -->
+          <line x1="200" y1="120" x2="200" y2="200" class="minute" />
+
+          <!-- seconds -->
+          <line x1="200" y1="100" x2="200" y2="200" class="second" />
+
+          <!-- time -->
+          <text x="200" y="75" text-anchor="middle" class="clock-number">
+            12
+          </text>
+          <text x="275" y="95" text-anchor="middle" class="clock-number">
+            1
+          </text>
+          <text x="320" y="145" text-anchor="middle" class="clock-number">
+            2
+          </text>
+          <text x="340" y="207" text-anchor="middle" class="clock-number">
+            3
+          </text>
+          <text x="320" y="280" text-anchor="middle" class="clock-number">
+            4
+          </text>
+          <text x="265" y="335" text-anchor="middle" class="clock-number">
+            5
+          </text>
+          <text x="195" y="350" text-anchor="middle" class="clock-number">
+            6
+          </text>
+          <text x="120" y="320" text-anchor="middle" class="clock-number">
+            7
+          </text>
+          <text x="80" y="275" text-anchor="middle" class="clock-number">
+            8
+          </text>
+          <text x="60" y="208" text-anchor="middle" class="clock-number">
+            9
+          </text>
+          <text x="80" y="145" text-anchor="middle" class="clock-number">
+            10
+          </text>
+          <text x="125" y="95" text-anchor="middle" class="clock-number">
+            11
+          </text>
+        </svg>
+      </div>
+
+      <div id="digi-clock">
+        <div class="digital-clock" id="digital-clock">
+          <span id="clock-hour" class="clock-unit"></span>
+          <span class="separaters">:</span>
+          <span id="clock-minute" class="clock-unit"></span>
+          <span class="separaters">:</span>
+          <div class="clock-unit-container">
+            <span id="previous-second" class="previous-clock-unit"></span>
+            <span id="clock-second" class="clock-unit"></span>
+            <span id="next-second" class="next-clock-unit"></span>
+          </div>
+          <span class="separaters"> &nbsp;</span>
+          <span id="ampm" class="clock-unit"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
